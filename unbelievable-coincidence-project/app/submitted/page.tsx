@@ -1,0 +1,2 @@
+import Link from 'next/link';import {Header} from '@/components/Header';
+export default function Submitted(){return <div className="page narrow"><Header/><main className="notice stand-alone"><div className="eyebrow">Submission verified</div><h1>Thank you for trusting us with your story.</h1><p>It is now awaiting editorial review. If selected, it will appear on the site after approval.</p><Link href="/">Return to the stories →</Link></main></div>}

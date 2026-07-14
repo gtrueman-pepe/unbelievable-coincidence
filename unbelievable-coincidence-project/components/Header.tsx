@@ -1,0 +1,2 @@
+import Image from 'next/image';import Link from 'next/link';
+export function Header(){return <header className="site-header"><Link href="/" aria-label="Unbelievable Coincidence home"><Image className="logo" src="/UBClogo.PNG" width={485} height={150} priority alt="Unbelievable Coincidence"/></Link><div className="header-rule"/><p className="dek">True stories of chance, connection, and the nearly impossible.</p></header>}
