@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f5f0e6" />
+  <meta name="description" content="The Pynchon Atlas — Mason & Dixon, complete 78-chapter expanded narrative edition." />
+  <meta name="pynchon-atlas-build" content="2026.07.14-v4-characters" />
+  <title>The Pynchon Atlas — Mason &amp; Dixon</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <button id="menuBtn" class="icon-button menu-button" aria-label="Open navigation">☰</button>
+    <div class="brand" role="banner">
+      <span class="eyebrow">The Pynchon Atlas</span>
+      <strong>Mason &amp; Dixon</strong>
+      <small class="author-credit">by Pépé d’Escaubitte</small>
+    </div>
+    <button id="themeBtn" class="icon-button" aria-label="Toggle dark mode">◐</button>
+  </header>
+
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Chapter navigation">
+      <div class="sidebar-inner">
+        <label class="search-wrap">
+          <span class="sr-only">Search The Pynchon Atlas</span>
+          <input id="searchInput" type="search" placeholder="Search chapters, people, places…" autocomplete="off" />
+          <kbd>⌘ K</kbd>
+        </label>
+
+        <div class="filter-row" role="group" aria-label="Filter by part">
+          <button class="filter active" data-part="all">All</button>
+          <button class="filter" data-part="1">I</button>
+          <button class="filter" data-part="2">II</button>
+          <button class="filter" data-part="3">III</button>
+        </div>
+
+        <div class="utility-links">
+          <button id="bookmarksBtn" class="text-button">★ Bookmarks <span id="bookmarkCount">0</span></button>
+          <button id="recentBtn" class="text-button">↺ Recently viewed</button>
+        </div>
+
+        <p id="resultCount" class="result-count"></p>
+        <nav id="chapterList" class="chapter-list"></nav>
+      </div>
+    </aside>
+
+    <main id="main" class="main-content" tabindex="-1">
+      <section id="homeView" class="home-view">
+        <div class="hero">
+          <span class="eyebrow">Expanded Narrative & Character Edition · Build 2026.07.14-v4</span>
+          <h1>The Pynchon Atlas: <em>Mason &amp; Dixon</em></h1>
+          <p>A searchable, chapter-by-chapter companion by Pépé d’Escaubitte. This build contains distinct Overview and Expanded Narrative sections for all 78 chapters, with first-appearance character profiles.</p>
+          <div class="hero-actions">
+            <button id="continueBtn" class="primary-button">Continue reading</button>
+            <button id="browseBtn" class="secondary-button">Browse chapters</button>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <article class="dashboard-card">
+            <span class="card-label">Continue</span>
+            <h2 id="continueTitle">Chapter 1</h2>
+            <p id="continueSummary">The Storyteller’s Table</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="card-label">Coverage</span>
+            <h2>78 chapters</h2>
+            <p>All three structural parts are indexed and searchable.</p>
+          </article>
+          <article class="dashboard-card">
+            <span class="card-label">Private reader</span>
+            <h2>Notes &amp; bookmarks</h2>
+            <p>Stored locally in this browser. Nothing is sent to a server.</p>
+          </article>
+        </div>
+
+        <section class="part-cards" aria-label="Parts of the novel">
+          <button class="part-card" data-open-part="1"><span>Part I</span><strong>Latitudes and Departures</strong><small>Chapters 1–25</small></button>
+          <button class="part-card" data-open-part="2"><span>Part II</span><strong>America</strong><small>Chapters 26–73</small></button>
+          <button class="part-card" data-open-part="3"><span>Part III</span><strong>Last Transit</strong><small>Chapters 74–78</small></button>
+        </section>
+      </section>
+
+      <article id="chapterView" class="chapter-view hidden" aria-live="polite">
+        <div class="chapter-toolbar">
+          <button id="backHome" class="text-button">← Home</button>
+          <div class="chapter-actions">
+            <button id="bookmarkBtn" class="icon-button" aria-label="Bookmark chapter">☆</button>
+            <button id="shareBtn" class="icon-button" aria-label="Copy chapter link">↗</button>
+          </div>
+        </div>
+
+        <header class="chapter-header">
+          <div class="chapter-kicker" id="chapterKicker"></div>
+          <h1 id="chapterTitle"></h1>
+          <p id="chapterSetting" class="chapter-setting"></p>
+          <div id="chapterTags" class="tag-row"></div>
+        </header>
+
+        <div class="reading-layout">
+          <nav class="toc" aria-label="On this page">
+            <span>On this page</span>
+            <a href="#orientation">Overview</a>
+            <a href="#narrative">Narrative</a>
+            <a href="#characters">Characters</a>
+            <a href="#notes">My notes</a>
+          </nav>
+
+          <div class="chapter-body">
+            <section id="orientation"><h2>Overview</h2><p id="orientationText"></p></section>
+            <section id="narrative"><h2>Expanded narrative</h2><p id="narrativeText"></p></section>
+            <section id="characters"><h2>Characters</h2><div id="charactersList" class="character-list"></div></section>
+            <section id="chapterQuote" class="matters-box quote-box hidden" aria-label="Chapter quotation"><blockquote id="quoteText"></blockquote><cite id="quoteAttribution"></cite></section>
+            <section id="notes" class="notes-section">
+              <div class="notes-heading"><h2>My notes</h2><span>Saved privately on this device</span></div>
+              <textarea id="notesField" rows="7" placeholder="Add observations, cross-references, questions, or page numbers…"></textarea>
+              <p id="saveStatus" class="save-status" aria-live="polite"></p>
+            </section>
+          </div>
+        </div>
+
+        <footer class="chapter-nav">
+          <button id="prevBtn" class="nav-card"></button>
+          <button id="nextBtn" class="nav-card"></button>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <footer class="build-footer">The Pynchon Atlas · Expanded Narrative & Character Build · 2026.07.14-v4</footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="chapters.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,22 +1,39 @@
-# Unbelievable Coincidence
+# The Pynchon Atlas — Build v4
 
-A mobile-first, moderated collection of true coincidence stories, built for Next.js, Vercel, Supabase, Cloudflare Turnstile, and Resend.
+All 78 expanded narratives are included. Structural Reading and Why This Chapter Matters are suppressed. The callout design is reserved for future unlabeled chapter quotations. The Characters section contains short profiles only in the chapter of first appearance.
 
-## Launch setup
+# The Pynchon Atlas — Mason & Dixon
 
-1. Create a Supabase project and run `supabase/schema.sql` in its SQL editor.
-2. In Supabase Authentication, enable email magic links and add `https://unbelievablecoincidence.com/auth/callback` as a redirect URL.
-3. Create a Cloudflare Turnstile widget for the production domain.
-4. Verify the sending domain in Resend.
-5. Import this repository into Vercel and add every variable from `.env.example`.
-6. Add `unbelievablecoincidence.com` in Vercel Domains and point the registrar DNS records as Vercel instructs.
+A responsive, static-first reader prototype.
 
-Only `OWNER_EMAIL` can enter `/admin`. Visitors must pass Turnstile and verify their email before a submission reaches moderation. Published stories are publicly readable; emails and pending submissions are not.
+## Run locally
 
-## Local development
+From this folder:
 
-Copy `.env.example` to `.env.local`, fill in credentials, then run `npm install` and `npm run dev`.
+```bash
+python3 -m http.server 8000
+```
 
-## Editorial flow
+Then open `http://localhost:8000`.
 
-Submission → bot check → private email verification → owner notification → `/admin` review → publication.
+## Features
+
+- 78-chapter browser organized by the novel's three parts
+- Full-text search across chapter metadata and available structured content
+- Part filters
+- Bookmarks
+- Recently viewed chapters
+- Private per-chapter notes stored in browser localStorage
+- Light and dark modes
+- Previous/next navigation
+- Installable web-app manifest and offline service worker
+
+## Content status
+
+The complete 78-chapter architecture and searchable metadata are loaded. A representative set of chapters includes longer structured entries; the remaining chapters use concise structured summaries and are ready for progressive replacement with the full expanded corpus.
+
+
+Author credit: Pépé d’Escaubitte.
+
+## Expanded narrative corpus
+This build contains distinct, chapter-specific Overview and Expanded Narrative content for all 78 chapters. The search index includes both fields.

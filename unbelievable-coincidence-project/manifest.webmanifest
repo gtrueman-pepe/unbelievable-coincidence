@@ -1,0 +1,9 @@
+{
+  "name": "The Pynchon Atlas — Mason & Dixon",
+  "short_name": "Pynchon Atlas",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f0e6",
+  "theme_color": "#f5f0e6",
+  "description": "A searchable chapter companion to Thomas Pynchon's Mason & Dixon."
+}
