@@ -1,0 +1,3 @@
+import Link from 'next/link';import {Header} from '@/components/Header';import {SubmitForm} from '@/components/SubmitForm';
+export const metadata={title:'Submit a story'};
+export default function Submit(){return <div className="page narrow"><Header/><main className="submit-page"><Link href="/" className="back">← Return to the stories</Link><div className="eyebrow">A true story, told by you</div><h1>Tell us what happened.</h1><p className="intro">We welcome firsthand accounts of remarkable coincidence. Every submission is email-verified and reviewed before publication. Your email is never displayed.</p><SubmitForm/></main></div>}

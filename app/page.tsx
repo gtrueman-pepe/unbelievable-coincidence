@@ -1,0 +1,3 @@
+import { Header } from '@/components/Header';import { StoryShell } from '@/components/StoryShell';import { publicDb,type Story } from '@/lib/supabase';
+export const revalidate=60;
+export default async function Home(){let stories:Story[]=[];if(process.env.NEXT_PUBLIC_SUPABASE_URL){const {data}=await publicDb().from('published_stories').select('*').order('published_at',{ascending:false});stories=(data||[]) as Story[];}const featured=stories.length?stories[Math.floor(Math.random()*stories.length)]:undefined;return <><div className="page"><Header/><StoryShell stories={stories} featured={featured}/><footer><span>Edited by Pépé d’Escaubitte</span><span>© {new Date().getFullYear()} Unbelievable Coincidence</span></footer></div></>}
