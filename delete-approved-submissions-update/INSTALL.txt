@@ -1,0 +1,12 @@
+UNBELIEVABLE COINCIDENCE — DELETE APPROVED SUBMISSIONS
+
+1. Upload the files in this ZIP to GitHub, preserving their folder locations.
+2. Commit to main with: Add approved-submission deletion
+3. Wait for the Vercel deployment to show Ready.
+
+No Supabase migration and no new Vercel environment variables are required.
+
+To use the feature, open an accepted story under Approved submissions in the
+Editorial Desk. The Delete permanently button appears beneath the editing form.
+A confirmation dialog explains everything that will be removed before the
+deletion proceeds.
