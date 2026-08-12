@@ -1,0 +1,11 @@
+UNBELIEVABLE COINCIDENCE — VIEW STORY LIST LINK
+
+1. Upload the files in this ZIP to GitHub, preserving their folder locations.
+2. Commit to main with: Add direct story-list link
+3. Wait for the Vercel deployment to show Ready.
+
+No Supabase migration and no new Vercel environment variables are required.
+
+The homepage now displays “View story list →” above the randomly featured
+story. Tapping it jumps directly to the story list, which is especially useful
+on narrow mobile screens where the list follows the featured story.
