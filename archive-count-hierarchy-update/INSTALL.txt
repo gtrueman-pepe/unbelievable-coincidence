@@ -1,0 +1,11 @@
+UNBELIEVABLE COINCIDENCE — ARCHIVE COUNT HIERARCHY
+
+1. Upload app/globals.css to the same location in GitHub, replacing the current file.
+2. Commit to main with: Refine story archive heading hierarchy
+3. Wait for the Vercel deployment to show Ready.
+
+No Supabase migration and no Vercel setting changes are required.
+
+This update places the archive total beneath THE STORIES in smaller, muted,
+sentence-case type. The Most Recent and Highest Rated controls remain on their
+own line with clear separation.
