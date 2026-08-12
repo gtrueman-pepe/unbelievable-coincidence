@@ -1,0 +1,24 @@
+UNBELIEVABLE COINCIDENCE — PERMANENT ARCHIVE NUMBERS + REFINED HEADER
+
+This package supersedes both earlier packages:
+
+- unbelievable-coincidence-permanent-archive-numbers.zip
+- unbelievable-coincidence-archive-count-hierarchy.zip
+
+Deployment order
+
+1. In Supabase, open SQL Editor.
+2. Run supabase/permanent-archive-numbers.sql once.
+3. Upload the remaining files to GitHub, preserving their folders.
+4. Commit to main with: Add permanent story numbers and archive count
+5. Wait for the Vercel deployment to show Ready.
+
+What changes
+
+- Accepted stories receive permanent numbers based on submission order.
+- Sorting never changes those numbers.
+- The archive count appears beneath THE STORIES in smaller, muted text.
+- Most Recent and Highest Rated remain separately identifiable as controls.
+- Hiding or deleting a story can leave a permanent-number gap.
+
+No new Vercel environment variables are required.
