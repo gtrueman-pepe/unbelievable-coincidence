@@ -59,7 +59,7 @@ export function Rating({
       </div>
 
       <div className="rating-control">
-        <span>Rate with </span>
+        <span>Rate with the </span>
 
         <button
           type="button"
