@@ -1,7 +1,6 @@
 'use client';
 import {useState} from 'react';
-
-const labels=['Amazing!','Jawdropping!!','Gobsmacked!!!','I need proof!?!','NO.DO.NOT.BELIEVE'];
+const labels=['Amazing! (Lowest)','Jawdropping!!','Gobsmacked!!!','I need proof!?!','NO.DO.NOT.BELIEVE (Highest)'];
 export function Rating({storyId,initialCount,initialTotal}:{storyId:string,initialCount:number,initialTotal:number}){
   const [count,setCount]=useState(initialCount);const [total,setTotal]=useState(initialTotal);const [open,setOpen]=useState(false);const [message,setMessage]=useState('');const [busy,setBusy]=useState(false);
   const average=count?(total/count).toFixed(1):'—';
