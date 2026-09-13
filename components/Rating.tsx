@@ -81,9 +81,9 @@ export function Rating({
               >
                 <b>{i+1}.</b>{' '}
                 {i===0 ? (
-                  <>Amazing! <span style={{color:'var(--ink)'}}>(Lowest)</span></>
+                  <>Amazing! <span style={{color:'var(--ink)',fontWeight:400}}>(Lowest)</span></>
                 ) : i===labels.length-1 ? (
-                  <>NO.DO.NOT.BELIEVE <span style={{color:'var(--ink)'}}>(Highest)</span></>
+                  <>NO.DO.NOT.BELIEVE <span style={{color:'var(--ink)',fontWeight:400}}>(Highest)</span></>
                 ) : (
                   label
                 )}
